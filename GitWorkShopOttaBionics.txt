@@ -1,0 +1,349 @@
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ ls
+README.txt
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ clear
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git add --all
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ status
+bash: status: command not found
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.txt
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ status
+bash: status: command not found
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.txt
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git add README.txt
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git commit -m "first commit"
+[master (root-commit) c2378a8] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git log
+commit c2378a8a83c6d94ff82764457781491f12692a89
+Author: Arturouuu <art9518@gmail.com>
+Date:   Thu Nov 30 18:34:37 2017 -0500
+
+    first commit
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git remote add origin https://github.com/Arturou/workshop.git
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 222 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Arturou/workshop.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git checkout new
+error: pathspec 'new' did not match any file(s) known to git.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git branch new
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git checkout new
+Switched to branch 'new'
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git status
+On branch new
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git checkout master
+M       README.txt
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git checkout new
+M       README.txt
+Switched to branch 'new'
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git status
+On branch new
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git add README.txt
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git status
+On branch new
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.txt
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git commit -m "new stuff"
+[new 883d512] new stuff
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git checkout new
+Switched to branch 'new'
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git push
+fatal: The current branch new has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git push --set-upstream origin new
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 257 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Arturou/workshop.git
+ * [new branch]      new -> new
+Branch new set up to track remote branch new from origin.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git status
+On branch new
+Your branch is up-to-date with 'origin/new'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Nuevo documento de texto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Nuevo documento de texto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (master)
+$ git checkout new
+Switched to branch 'new'
+Your branch is up-to-date with 'origin/new'.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git status
+On branch new
+Your branch is up-to-date with 'origin/new'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Nuevo documento de texto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git add .
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git commit -m "new commit"
+[new d2a984b] new commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Nuevo documento de texto.txt
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Arturou/workshop.git
+   883d512..d2a984b  new -> new
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git pull master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git pull
+Already up-to-date.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git pull -origin master
+error: unknown switch `o'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git pull origin master
+From https://github.com/Arturou/workshop
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git branch -m not new
+fatal: A branch named 'new' already exists.
+
+art18@DELL-HOME-LAPTOP MINGW64 ~/eclipse-workspace/workshop (new)
+$ git branch -m not
